@@ -3,14 +3,16 @@ A command that allows you to change the Windows Terminal background from the com
 
 # Setup
 You can compile locally or download the provided exe.
-Place the exe somewhere your system environment variable will pick up.
+Place the exe somewhere your system environment variables will pick up.
 
 The command loads a list of potential image options when it is called.
 The file for this should be called images.txt and be located in the same folder as the Windows Terminal settings:
+
 %USERPROFILE%\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState
+
 Formatting for this file is as follows:
 Each image entry should be on a seperate line.
-Each image entry should contain a name, followed by any number of commas and spaces, and a filepath to a image file (in quotation marks).
+Each image entry should contain a name, followed by any number of commas and spaces, and ending with a filepath to a image file (in quotation marks).
 The file should look something like this:
 
 [name 1] [ , | _ ] ["image path 1 in quotes"]
@@ -31,7 +33,9 @@ another random image from the images.txt file. If you pass a name that exists in
 background images will be changed to the image file associated with that name. If you attempt to pass a name 
 that doesn't exist, you will get a list of all the potential names. You can also get this list by
 passing the argument --names or -n to the command. 
+
 There is also a pretty nice set of help commands. Try --help.
+
 # Demo
 Yes my backgrounds are nice, thank you :)
 
