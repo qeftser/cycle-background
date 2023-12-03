@@ -1,4 +1,4 @@
-# Change Background
+# Cycle Background
 A command that allows you to change the Windows Terminal background from the command line.
 
 # Setup
