@@ -103,6 +103,16 @@ char lstSL(struct stringList *sl) {
    return *(sl->string+(sl->tail-1));
 }
 
+int eqlSL(char *string, struct stringList *sl) {
+   int slen = strlen(string);
+   if (slen != sl->tail - sl->head)
+      return 0;
+   for (int i = 0; i < slen; i++)
+      if (*(string+i) != *(sl->string+(i+sl->head)))
+         return 0;
+   return 1;
+}
+
 void printSL(struct stringList *sl) {
    int n = sl->tail - sl->head;
    for (int i = 0; i < n; i++) {
@@ -119,7 +129,6 @@ char *f_toStringSL(struct stringList *sl) {
       *(ret + i) = j;
    }
    *(ret + i) = '\0';
-   free(sl);
    return ret;
 }
    
@@ -131,7 +140,22 @@ char *r_toStringSL(struct stringList *sl) {
       *(ret + i) = j;
    }
    *(ret + i) = '\0';
-   free(sl);
    return ret;
+}
+
+char *fileToString(char *filePath) {
+   FILE *flpt = fopen(filePath, "r");
+   if (flpt == NULL) {
+      fprintf(stderr, "ERROR: Given file %s does not exist", filePath);
+      exit(EXIT_FAILURE);
+   }
+   struct stringList *sl = makeStringList(16);
+   char c;
+   while ((c = getc(flpt)) != EOF) {
+         pshSL(c,sl);
+   }
+   fclose(flpt);
+   return f_toStringSL(sl);
+   free(sl);
 }
 
