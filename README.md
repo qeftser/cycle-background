@@ -29,7 +29,7 @@ change all of your set background images (Command line profiles you have a image
 in your images.txt file. If you pass the argument -r to the command, each set background image will be changed to
 another random image from the images.txt file. If you pass a name that exists in your images.txt file, all set
 background images will be changed to the image file associated with that name. If you attempt to pass a name 
-that is spelling incorrectly, you will get a list of all the potential names. You can also get this list by
+that doesn't exist, you will get a list of all the potential names. You can also get this list by
 passing the argument --names or -n to the command. 
 There is also a pretty nice set of help commands. Try --help.
 # Demo
