@@ -26,7 +26,7 @@ int main(int argc, char **argv) {
   srand(time(NULL));
 
   if (argc == 2 && argsContain("--version", argv, argc)) {
-     printf("Cycle Background\nVersion 1.0\nWritten by qeftser\n");
+     printf("Cycle Background\nVersion 1.0.0\nWritten by qeftser\n");
      exit(EXIT_SUCCESS);
   }
   else if (argc == 3 && argsContain("--help", argv, argc) && argsContain("--route", argv, argc)) {
