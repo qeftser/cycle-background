@@ -35,7 +35,7 @@ There is also a pretty nice set of help commands. Try --help.
 # Demo
 Yes my backgrounds are nice, thank you :)
 
-
+https://github.com/qeftser/cycle-background/assets/144874443/d0cfc9f0-6ba1-4349-96fa-44c6f5ba3f34
 
 
 
