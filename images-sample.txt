@@ -1,0 +1,7 @@
+name-1   "image/path/1"
+name-2   "image/path/2"
+name-3, "image/path/3"
+name-4, , , , "image/path/4"
+skipped-line
+name-5, "image/path/5"
+name-6  "image/path/6"
